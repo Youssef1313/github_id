@@ -80,7 +80,7 @@
 
       $('form').submit(function(event) {
         event.preventDefault()
-
+        $('form p').show()
         $('form p').show()
         var name = $("#github_username").val().trim()
 
@@ -89,7 +89,7 @@
           show_user(username, id)
           document.location.hash = "#" + username
         })
-
+        $('form p').html("Not found")
         return false
       });
 
